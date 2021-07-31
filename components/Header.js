@@ -3,7 +3,7 @@ import Icon from '@material-tailwind/react/Icon';
 
 const Header = () => {
   return (
-    <div className='sticky top-0 z-50 flex items-center px-4 py-2 shadow-md bg-white'>
+    <section className='sticky top-0 z-50 flex items-center px-4 py-2 shadow-md bg-white'>
       <Button
         color='gray'
         buttonType='outline'
@@ -44,7 +44,7 @@ const Header = () => {
         alt='pic'
         className='cursor-pointer h-12 w-12 rounded-full ml-2'
       />
-    </div>
+    </section>
   );
 };
 
