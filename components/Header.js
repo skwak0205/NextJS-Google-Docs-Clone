@@ -19,7 +19,9 @@ const Header = () => {
       </Button>
 
       <Icon name='description' size='5xl' color='blue' />
-      <h1 className='ml-2 text-gray-700 text-2xl'>Docs</h1>
+      <h1 className='hidden md:inline-flex ml-2 text-gray-700 text-2xl'>
+        Docs
+      </h1>
 
       <div className='mx-5 md:mx-20 flex flex-grow items-center px-5 py-2 bg-gray-100 text-gray-600 rounded-lg focus-within:text-gray-600 focus-within:shadow-md'>
         <Icon name='search' size='3xl' color='gray' />
