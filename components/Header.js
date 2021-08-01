@@ -1,7 +1,10 @@
+import { signOut, useSession } from 'next-auth/client';
 import Button from '@material-tailwind/react/Button';
 import Icon from '@material-tailwind/react/Icon';
 
 const Header = () => {
+  const [session] = useSession();
+
   return (
     <section className='sticky top-0 z-50 flex items-center px-4 py-2 shadow-md bg-white'>
       <Button
@@ -40,9 +43,10 @@ const Header = () => {
 
       <img
         loading='lazy'
-        src='https://lh3.googleusercontent.com/ogw/ADea4I7fUwq5gjrt3CNl8mvmTtOB3jFyGhipeJDWORYtbw=s32-c-mo'
+        src={session?.user?.image}
         alt='pic'
         className='cursor-pointer h-12 w-12 rounded-full ml-2'
+        onClick={signOut}
       />
     </section>
   );
