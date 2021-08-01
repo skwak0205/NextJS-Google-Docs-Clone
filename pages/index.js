@@ -12,6 +12,7 @@ import Icon from '@material-tailwind/react/Icon';
 import Modal from '@material-tailwind/react/Modal';
 import ModalBody from '@material-tailwind/react/ModalBody';
 import ModalFooter from '@material-tailwind/react/ModalFooter';
+import DocumentRow from '../components/DocumentRow';
 
 export default function Home() {
   const [session] = useSession();
@@ -119,16 +120,16 @@ export default function Home() {
             <p className='mr-12'>Date Created</p>
             <Icon name='folder' size='3xl' color='gray' />
           </div>
-        </div>
 
-        {snapshot?.docs.map((doc) => {
-          <DocumentRow
-            key={doc.id}
-            id={doc.id}
-            fileName={doc.data().fileName}
-            date={doc.data().timestamp}
-          />;
-        })}
+          {snapshot?.docs.map((doc) => (
+            <DocumentRow
+              key={doc.id}
+              id={doc.id}
+              fileName={doc.data().fileName}
+              date={doc.data().timestamp}
+            />
+          ))}
+        </div>
       </section>
     </div>
   );
